@@ -1,0 +1,139 @@
+body {
+    font-family: 'Poppins';
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.cabecalho .logo {
+    width: 65px;
+    cursor: pointer;
+}
+
+.cabecalho .menu {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.cabecalho navi .menu li a{
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 250ms;
+}
+
+.cabecalho navi .menu li a:hover {
+    background-color: #d5011b;
+    
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    height: calc(100vh - 132px);
+    align-items: center;
+    padding: 0 30px 30px;
+}
+
+.container .informacoes .imagem-titulo {
+    max-width: 500px;
+}
+
+.container .descricao {
+    color: #a8adb7;
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+.container .botao-trailer {
+    background-color: #ff0021;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms all ease-in-out;
+}
+
+.container .botao-trailer:hover{
+    transform: scale(1.1);
+}
+
+.video-fundo {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.video-fundo .video {
+    height: 100vh;
+}
+
+.video-fundo::after {
+    content: "";
+    background:rgb(0, 0, 0) ;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+
+}
+
+.container .modal {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(52,52,50,0.749);
+    visibility: hidden;
+}
+
+.container .modal .conteudo-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap: 15px;    
+}
+
+.container .modal .fechar-modal {
+    background-color: #ffffff;
+    color: #f03a17;
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 13px;
+}
+
+.container .modal .conteudo-modal iframe {
+    border: none;
+}
+
+.container .modal.aberto {
+    opacity: 1;
+    visibility: visible;
+}
